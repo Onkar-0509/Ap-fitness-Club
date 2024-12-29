@@ -20,7 +20,7 @@ const Profile = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:3000/api/profile', Profile);
+      const response = await axios.post('https://ap-fitness-club-api1.vercel.app/api/profile', Profile);
       const { message, success } = response.data;
 
       if (success) {
