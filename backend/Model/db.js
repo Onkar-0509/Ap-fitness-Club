@@ -5,6 +5,8 @@ dotenv.config();
 
 const mongo_url=process.env.MONGO_URL;
 
+console.log("mongo_url",mongo_url);
+
 
 
 mongoose.connect(mongo_url)
