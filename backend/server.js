@@ -11,9 +11,7 @@ const app=express();
 const PORT=process.env.PORT || 3000;
 
 
-app.use(cors(
-    // origin: "http://192.168.216.188:5173/", // Replace with your frontend IP and port
-));
+app.use(cors());
 app.use(express.json());
 
 app.use('/api',MemberRoutes);
