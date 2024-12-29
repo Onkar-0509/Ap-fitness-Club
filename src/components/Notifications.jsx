@@ -22,7 +22,7 @@ const Notifications = () => {
   useEffect(() => {
     const fetchdata = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/notifications');
+        const response = await axios.get('https://ap-fitness-club-api1.vercel.app/api/notifications');
         const { message, success, notifications } = response.data;
 
         if (success) {
@@ -40,7 +40,7 @@ const Notifications = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:3000/api/deletenotification/${id}`);
+      const response = await axios.delete(`https://ap-fitness-club-api1.vercel.app/api/deletenotification/${id}`);
       const { message, success, notifications } = response.data;
 
       if (success) {
