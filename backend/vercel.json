@@ -1,14 +1,14 @@
 {
   "version": 2,
   "functions": {
-    "backend/api/**/*.js": {
-      "runtime": "nodejs16.x"
+    "backend/server.js": {
+      "runtime": "@vercel/node"
     }
   },
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/backend/api/$1"
+      "dest": "backend/server.js"
     }
   ]
 }
