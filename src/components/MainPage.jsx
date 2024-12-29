@@ -32,7 +32,7 @@ const MainPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/info");
+        const response = await axios.get("https://ap-fitness-club-api1.vercel.app/api/info");
         const { message, success, data } = response.data;
 
         if (success) {
@@ -77,7 +77,7 @@ const MainPage = () => {
 
     try {
       if (editId) {
-        const response = await axios.put(`http://localhost:3000/api/updateMember/${editId}`, data);
+        const response = await axios.put(`https://ap-fitness-club-api1.vercel.app/api/updateMember/${editId}`, data);
         const { message, success, updatedMember } = response.data;
 
         if (success) {
@@ -86,7 +86,7 @@ const MainPage = () => {
         }
         setEditId(null); // Reset edit mode
       } else {
-        const response = await axios.post('http://localhost:3000/api/memberinfo', data);
+        const response = await axios.post('https://ap-fitness-club-api1.vercel.app/api/memberinfo', data);
         const { message, success, membersinfo } = response.data;
 
         if (success) {
@@ -115,7 +115,7 @@ const MainPage = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:3000/api/memberinfo/${id}`);
+      const response = await axios.delete(`https://ap-fitness-club-api1.vercel.app/api/memberinfo/${id}`);
       const { message, success, data } = response.data;
   
       if (success) {
