@@ -9,6 +9,14 @@ const login = async (req, res) => {
   try {
     const { username, password } = req.body;
 
+    const user= new User({
+      username:"apfitness@gmail.com",
+      password:"123456",
+      phoneNumber:"9067354605",
+    })
+
+    await user.save();
+
 
     const Userdata = await User.findOne({ username }); 
 
