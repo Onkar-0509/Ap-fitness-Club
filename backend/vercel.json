@@ -1,20 +1,14 @@
 {
   "version": 2,
   "functions": {
-    "api/**.js": {
-      "runtime": "node16"
+    "backend/api/**/*.js": {
+      "runtime": "nodejs16.x"
     }
   },
-  "builds": [
-    {
-      "src": "backend/package.json",
-      "use": "@vercel/node"
-    }
-  ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/api/$1"
+      "dest": "/backend/api/$1"
     }
   ]
 }
