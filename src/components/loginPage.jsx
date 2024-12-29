@@ -27,7 +27,7 @@ const LoginPage = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:3000/api/login', LoginInfo);
+      const response = await axios.post('https://ap-fitness-club-api1.vercel.app/api/login', LoginInfo);
       const { message, success, token } = response.data;
 
       if (success) {
